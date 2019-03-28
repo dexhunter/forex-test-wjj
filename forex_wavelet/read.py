@@ -14,8 +14,8 @@ for i in range(len(name)):
     df[i].set_index('Date', inplace=True)
     data_c = np.array(df[i]['Close'])
 
-    # use DWT to transform a time series into a approximate part and a detailed part
-    cA_c, cD_c = pywt.dwt(data_c,'db1')respectively
+    # use DWT to transform a time series into a approximate part and a detailed part respectively
+    cA_c, cD_c = pywt.dwt(data_c,'db1')
 
     #store data
     output1=pd.DataFrame([df[i],cA_c],index=['Close_cA'])
